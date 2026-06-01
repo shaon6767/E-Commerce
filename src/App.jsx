@@ -14,29 +14,24 @@ import Error from "./pages/Error"
 
 let router = createBrowserRouter(createRoutesFromElements(
   <>
-  <Route element={<RootLayout/>}>
-    <Route path="/" element={<Home/>}></Route>
-    <Route path="/allproduct" element={<AllProduct/>}></Route>
-    <Route path="/productdetails/:id" element={<ProductDetails/>}></Route>
-    <Route path="/cart" element={<Cart/>}></Route>
-    <Route path="/checkout" element={<Checkout/>}></Route>
-    <Route path="/ordercomplete" element={<OrderComplete/>}></Route>
-    <Route path="/blog" element={<Blog/>}></Route>
-    <Route path="/about" element={<About/>}></Route>
-    <Route path="/faq" element={<Faq/>}></Route>
-    <Route path="/contact" element={<Contact/>}></Route>
-  </Route>
-   <Route path="/*" element={<Error/>}></Route>
+    <Route element={<RootLayout />}>
+      <Route path="/" element={<Home />} />
+      <Route path="/allproduct" element={<AllProduct />} />
+      <Route path="/productdetails/:id" element={<ProductDetails />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/checkout" element={<Checkout />} />
+      <Route path="/ordercomplete" element={<OrderComplete />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/faq" element={<Faq />} />
+      <Route path="/contact" element={<Contact />} />
+    </Route>
+    <Route path="/*" element={<Error />} />
   </>
 ))
 
 function App() {
-
-  return (
-    <>
-    <RouterProvider router={router}></RouterProvider>
-    </>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App
